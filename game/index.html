@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 15px 0;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+
+        .score-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .score {
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 0 20px;
+            min-width: 60px;
+        }
+
+        .p1 {
+            color: #3498db;
+        }
+
+        .p2 {
+            color: #e74c3c;
+        }
+
+        .controls {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        select {
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 2px solid #bdc3c7;
+            font-size: 1rem;
+            background-color: white;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        select:focus {
+            border-color: #3498db;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: white;
+        }
+
+        #p1button {
+            background-color: #3498db;
+        }
+
+        #p1button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        #p2button {
+            background-color: #e74c3c;
+        }
+
+        #p2button:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        #reset {
+            background-color: #2ecc71;
+        }
+
+        #reset:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+        }
+
+        .round-scores {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed #bdc3c7;
+        }
+
+        .history {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .history h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .history-entry {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        @media (max-width: 500px) {
+            .buttons {
+                flex-direction: column;
+            }
+            
+            button {
+                width: 100%;
+            }
+        }
+        .spin {
+  animation: spin 1s ease;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Score Keeper</h1>
+        
+        <div class="score-display">
+            <span class="score p1" id="p1score">0</span>
+            <span>to</span>
+            <span class="score p2" id="p2score">0</span>
+        </div>
+        
+        <div class="controls">
+            <select id="select">
+                <option value="4">Playing to: 4</option>
+                <option value="5">Playing to: 5</option>
+                <option value="6">Playing to: 6</option>
+                <option value="7">Playing to: 7</option>
+                <option value="8">Playing to: 8</option>
+                <option value="9">Playing to: 9</option>
+            </select>
+            
+            <div class="buttons">
+                <button id="p1button">+1 Player One</button>
+                <button id="p2button">+1 Player Two</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+        
+        <div class="round-scores">
+            <h2>Round Scores</h2>
+            <div class="score-display">
+                <span class="score p1" id="p1Roundscore">0</span>
+             
+                <span class="score p2" id="p2Roundscore">0</span>
+            </div>
+         <h2 id="winnerMessage"></h2>
+
+        </div>
+        
+        <div class="history">
+            <h3>Score History</h3>
+            <div id="addNumber"></div>
+        </div>
+    </div>
+
+    <script src="app.js">
+    
+    </script>
+</body>
+</html>

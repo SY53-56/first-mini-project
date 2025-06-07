@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#container{
+     position: relative;
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 4px;
+    background-color: grey;
+    color: black;
+}
+#container h1{
+    text-align: center;
+
+}
+#button{
+    display: flex;
+    justify-content:space-evenly;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    
+}
+
+#button button:hover{
+   background-color: chartreuse;
+   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#question{
+    text-align: center;
+    margin-top: 4px;
+}
+#btnBox{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#btnAnswer{
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    width: 250px;
+    margin-top: 50px;
+}
+.btn{
+    padding: 5px;
+    border-radius: 10px;
+   
+}
+
+.btnStyle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 20px;
+}
+#back{
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#next{
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 4px;
+
+
+}
